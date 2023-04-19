@@ -22,12 +22,19 @@ if (playGame) {
           ? "squat"
           : computerChoice === 2
           ? "pull-up"
-          : // This is the third and final possobility, no need to check like above
-                  "row";
-        let result =
-            playerOne === computer ? "Tie game!"
-                : playerOne === "squat" && computer === "pull-up"
-                    ? `playerOn: ${playerOne}\nComputer: ${computer}\nComputer wins!`
+          : // This is the third and final possibility, no need to check like above
+            "row";
+
+      let result =
+        playerOne === computer
+          ? "Tie game!"
+          : playerOne === "squat" && computer === "pull-up"
+          ? `You: ${playerOne}\nSick cunt: ${computer}\nSick cunt wins!`
+          : playerOne === "pull-up" && computer === "row"
+          ? `You: ${playerOne}\nSick cunt: ${computer}\nSick cunt wins!`
+          : playerOne === "row" && computer === "squad"
+          ? `You: ${playerOne}\nSick cunt: ${computer}\nSick cunt wins!`
+          : `You: ${playerOne}\nSick cunt: ${computer}\nYou win!`;
     } else {
       alert("You didn't enter squat, pull-up or row!");
     }
