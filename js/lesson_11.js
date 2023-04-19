@@ -1,7 +1,7 @@
 // My first programed interactive Game
 
 // The Payer is asked if he wanna play a game
-let playGame = confirm("Shall we play squat, pull-up, or row?");
+let playGame = confirm("Shall we play squat, pull-up, row?");
 
 if (playGame) {
   //play
@@ -9,8 +9,8 @@ if (playGame) {
     "Do you wanna do a squat, a pull-up, or a row? Please enter."
   );
   if (playerChoice) {
-    let playerOne = playerchoice.trim().toLowerCase();
-    // || equal OR
+    let playerOne = playerChoice.trim().toLowerCase();
+    // "||" -> OR
     if (
       playerOne === "squat" ||
       playerOne === "pull-up" ||
@@ -29,17 +29,20 @@ if (playGame) {
         playerOne === computer
           ? "Tie game!"
           : playerOne === "squat" && computer === "pull-up"
-          ? `You: ${playerOne}\nSick cunt: ${computer}\nSick cunt wins!`
+          ? `You: ${playerOne}\nSick Cunt: ${computer}\nSick Cunt wins!`
           : playerOne === "pull-up" && computer === "row"
-          ? `You: ${playerOne}\nSick cunt: ${computer}\nSick cunt wins!`
+          ? `You: ${playerOne}\nSick Cunt: ${computer}\nSick Cunt wins!`
           : playerOne === "row" && computer === "squad"
-          ? `You: ${playerOne}\nSick cunt: ${computer}\nSick cunt wins!`
-          : `You: ${playerOne}\nSick cunt: ${computer}\nYou win!`;
+          ? `You: ${playerOne}\nSick Cunt: ${computer}\nSick Cunt wins!`
+          : `You: ${playerOne}\nSick Cunt: ${computer}\nYou win!`;
+      alert(result);
+      let playAgain = confirm("Play Again?");
+      playAgain ? location.reload() : alert("Ok, Thanks for playing");
     } else {
       alert("You didn't enter squat, pull-up or row!");
     }
   } else {
-    alert("i guess you changed your mind. Maybe next time.");
+    alert("I guess you changed your mind. Maybe next time.");
   }
 } else {
   alert("Ok, maybe next time.");
