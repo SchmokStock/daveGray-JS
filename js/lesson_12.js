@@ -24,8 +24,8 @@ myNumber += 2;
 /*
 let myNumber = 50;
 do {
-  myNumber++;
   console.log(myNumber);
+  myNumber++;
 } while (myNumber < 50);
 */
 
@@ -36,26 +36,25 @@ do {
 
 // you can put "let i = 1;" before or within the braces
 // you can put "i++;" in the code block or within the braces
-/*
-let i = 1;
-for (; let i = 0 i <= 10 i++; ) {
-  console.log(i);
-    i++;
-}
-*/
 
-// first Syntax
-let name = "John";
-let i = 0;
-
-for (; i < name.length; ) {
-  console.log(name.charAt(i));
-  i++;
-}
-
-// second Syntax
-// let name = "John";
-
-// for (let i = 0; i < name.length; i++) {
-//   console.log(name.charAt(i));
+// let i = 0;
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+//   i++;
 // }
+
+// first syntax
+// let name = "John";
+// let i = 0;
+
+// for (; i < name.length; ) {
+//   console.log(name.charAt(i));
+//   i++;
+// }
+
+// second syntax
+let name = "John";
+
+for (let i = 0; i < name.length; i++) {
+  console.log(name.charAt(i));
+}
