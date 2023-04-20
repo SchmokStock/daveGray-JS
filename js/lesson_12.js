@@ -53,8 +53,51 @@ do {
 // }
 
 // second syntax
-let name = "John";
+// let name = "John";
 
-for (let i = 0; i < name.length; i++) {
-  console.log(name.charAt(i));
+// for (let i = 0; i < name.length; i++) {
+//   console.log(name.charAt(i));
+// }
+
+// while (true)
+
+// let name = "John";
+// let counter = 0;
+// let myLetter;
+// while (true) {
+//   myLetter = name[counter];
+//   console.log(myLetter);
+//   if (myLetter === "h") break;
+//   counter++;
+// }
+
+// let name = "John";
+// let counter = 0;
+// let myLetter = Math.floor(Math.random() * name.length);
+// console.log(myLetter);
+
+// while (true) {
+//   if (counter === myLetter) break;
+//   console.log(counter);
+//   counter++;
+// }
+
+// Loops with "(true)" go on endlessly until a "break" statement comes in
+
+// continue statements
+
+let name = "John";
+let counter = 0;
+let myLetter;
+while (counter <= 3) {
+  myLetter = name[counter];
+  console.log(myLetter);
+  if (counter === 1) {
+    counter += 2;
+    continue;
+  }
+  if (myLetter === "h") break;
+  counter++;
 }
+
+// If a loop reach a continue statement then the loop starts over immediately
