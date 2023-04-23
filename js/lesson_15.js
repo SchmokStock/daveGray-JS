@@ -183,20 +183,14 @@ const cyberDept = [cyberShelfA, cyberShelfB];
 // put the two arrays (with another two arrays within it) into another array
 const nightMarket = [weaponDept, cyberDept];
 
-// creating Randomizer
-const randomThreeA = Math.floor(Math.random() * 3);
-const randomThreeB = Math.floor(Math.random() * 3);
-const randomThreeC = Math.floor(Math.random() * 3);
-const randomTwoA = Math.floor(Math.random() * 2);
-const randomTwoB = Math.floor(Math.random() * 2);
-const randomTwoC = Math.floor(Math.random() * 2);
-const randomTwoD = Math.floor(Math.random() * 2);
-const randomTwoE = Math.floor(Math.random() * 2);
-const randomTwoF = Math.floor(Math.random() * 2);
+// declare function with Randomizer
+const getRandom = function (max) {
+  return Math.floor(Math.random() * max);
+};
 
-console.log(nightMarket[randomTwoD][randomTwoA][randomThreeA]);
-console.log(nightMarket[randomTwoE][randomTwoB][randomThreeB]);
-console.log(nightMarket[randomTwoF][randomTwoC][randomThreeC]);
+for (let i = 0; i < 3; i++) {
+  console.log(nightMarket[getRandom(2)][getRandom(2)][getRandom(3)]);
+}
 
 // navigatiion through multiple level arrays succeed with multpile braces [][]...
 // each braces stands for one dimesnion
