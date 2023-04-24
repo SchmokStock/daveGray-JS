@@ -34,6 +34,7 @@
 
 // // remove the last item of an array by pop and saves it in lastItem
 // const lastItem = myArray.pop();
+// console.log(myArray);
 // console.log(lastItem);
 
 // --
@@ -44,10 +45,12 @@
 
 // // remove the first item of an array by shift and saves it in firstItem
 // const firstItem = myArray.shift();
+// console.log(myArray);
 // console.log(firstItem);
 
 // // adding 22 to first position of myArray and tells the length of myArray
 // const newLength = myArray.unshift(22);
+// console.log(myArray);
 // console.log(newLength);
 
 // --
@@ -77,6 +80,7 @@
 
 // // creating array with items from A to F
 // const myArray = ["A", "B", "C", "D", "E", "F"];
+// console.log(myArray);
 
 // -----------
 
@@ -94,13 +98,13 @@
 
 // // takes all items within the array and put them together in one string. seperating all items with commas by default.
 // const newString = myArray.join();
-
 // console.log(newString);
 
 // --
 
 // // takes all items within the array and put them together in one string. seperating all items with commas by default.
 // const newString = myArray.join();
+// console.log(newString);
 
 // // split the whole string at all "," and add all splitted parts as items to the array
 // const newArray = newString.split(",");
@@ -109,7 +113,7 @@
 
 // --
 
-// legacy way to combine arrays
+// // legacy way to combine arrays
 
 // const myArrayA = ["A", "B", "C"];
 // const myArrayB = ["D", "E", "F"];
@@ -120,23 +124,22 @@
 
 // --
 
-// // modern way to combine multiple arrays
+// modern way to combine multiple arrays
 
 // const myArrayA = ["A", "B", "C"];
 // const myArrayB = ["D", "E", "F"];
 
 // // spread operator "..." : creating a new array
-// // take the array values within the spread operator and spread them out as individuel values in  one array
+// // take the array values within the spread operator and spread them out as individuel values into one array
 // const newArray = [...myArrayB, ...myArrayB];
 // console.log(newArray);
-
-// --
 
 // // Without the spread operator we would have to arrays nested in a array
 // const newArray = [myArrayB, myArrayB];
 // console.log(newArray);
 
-// -----------
+// ###############
+// ###############
 
 // // declare four different arrays with each 3 items
 // const weaponShelfA = ["Heavy Pistol", "Very Heavy Pistol", "Rocket Launcher"];
@@ -162,35 +165,35 @@
 // console.log(nightMarket[0][0][1]);
 // console.log(nightMarket[1][1][0]);
 
-// // navigatiion through multiple level arrays succeed with multpile braces [][]...
-// // each braces stands for one dimesnion
+// navigatiion through multiple level arrays succeed with multpile braces [][]...
+// each braces stands for one dimesnion
 
 // -----------
 
-// adding a randomizer for the selection of array items
+// // adding a randomizer for the selection of array items
 
-// declare four different arrays with each 3 items
-const weaponShelfA = ["Heavy Pistol", "Very Heavy Pistol", "Rocket Launcher"];
-const weaponShelfB = ["Machete", "Sniper Rifle", "SMG"];
+// // declare four different arrays with each 3 items
+// const weaponShelfA = ["Heavy Pistol", "Very Heavy Pistol", "Rocket Launcher"];
+// const weaponShelfB = ["Machete", "Sniper Rifle", "SMG"];
 
-const cyberShelfA = ["Mantis-Blades", "Sandevistan", "Subdermal Armor"];
-const cyberShelfB = ["MicroOptics", "Interface Plugs", "Quick Change Mount"];
+// const cyberShelfA = ["Mantis-Blades", "Sandevistan", "Subdermal Armor"];
+// const cyberShelfB = ["MicroOptics", "Interface Plugs", "Quick Change Mount"];
 
-// put two of one sort of the four arrays into another array
-const weaponDept = [weaponShelfA, weaponShelfB];
-const cyberDept = [cyberShelfA, cyberShelfB];
+// // put two of one sort of the four arrays into another array
+// const weaponDept = [weaponShelfA, weaponShelfB];
+// const cyberDept = [cyberShelfA, cyberShelfB];
 
-// put the two arrays (with another two arrays within it) into another array
-const nightMarket = [weaponDept, cyberDept];
+// // put the two arrays (with another two arrays within it) into another array
+// const nightMarket = [weaponDept, cyberDept];
 
-// declare function with Randomizer
-const getRandom = function (max) {
-  return Math.floor(Math.random() * max);
-};
+// // declare function with Randomizer
+// const getRandom = function (max) {
+//   return Math.floor(Math.random() * max);
+// };
 
-for (let i = 0; i < 3; i++) {
-  console.log(nightMarket[getRandom(2)][getRandom(2)][getRandom(3)]);
-}
+// for (let i = 0; i < 3; i++) {
+//   console.log(nightMarket[getRandom(2)][getRandom(2)][getRandom(3)]);
+// }
 
-// navigatiion through multiple level arrays succeed with multpile braces [][]...
-// each braces stands for one dimesnion
+// // navigatiion through multiple level arrays succeed with multpile braces [][]...
+// // each braces stands for one dimesnion

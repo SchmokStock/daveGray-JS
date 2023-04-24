@@ -38,10 +38,10 @@ do {
 // you can put "i++;" in the code block or within the braces
 
 // let i = 0;
-// for (let i = 0; i <= 10; i++) {
-//   console.log(i);
-//   i++;
-// }
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+  // i++;
+}
 
 // first syntax
 // let name = "John";
