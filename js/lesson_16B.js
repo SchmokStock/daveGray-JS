@@ -2,12 +2,12 @@
 
 // Initialize game
 const initGame = () => {
-  // Player is asked if he wanna start the game.
+  // Player is asked if he wanna start to play the game.
   const startGame = confirm("Shall we play Squat, pull-up, row?");
   //   console.log(startGame);
 
-  // startGame gets true -> game start
-  // startGame gets false -> alert("Ok, maybe next time.")
+  // startGame = true -> game start
+  // startGame = false -> alert("Ok, maybe next time.")
   // calculated with Ternary Opereator
   startGame ? playGame() : alert("Ok, maybe next time.");
 };
@@ -15,15 +15,13 @@ const initGame = () => {
 const playGame = () => {
   // while (true) loops until a break statement comes in
   while (true) {
-    const playerChoice = playerChoicePrompt();
-    // playerChoice();
+    // Prompt to enter value to continue game
+    const playerChoice = getPlayerChoice(
+      prompt("Do you wanna do a squat, a pull-up, or a row? Please enter.")
+    );
 
-    if (playerChoiceStatement()) {
-      let playerOne;
-      let computer;
-      let playerChoice = playerChoiceLowerCase();
-      if (PlayerChoiceValidation) {
-      }
+    if (getPlayerChoice) {
+    } else if (!getPlayerChoice) {
     }
   }
 };
@@ -33,14 +31,12 @@ const okMaybeNextTime = () => {
   alert("Ok, maybe next time.");
 };
 
-// Prompt to enter value for game
-const playerChoicePrompt = () => {
-  prompt("Do you wanna do a squat, a pull-up, or a row? Please enter.");
+// Prompt to enter value to continue game
+const getPlayerChoice = (promptValue) => {
+  return promptValue;
 };
 
-const playerChoiceStatement = () => {};
-
-const playerChoiceLowerCase = (playerChoice) => {
+const toLowerCasePlayerChoice = (playerChoice) => {
   if (playerChoice || playerChoice === "") {
     return playerChoice.trim().toLowerCase();
   }
